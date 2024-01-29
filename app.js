@@ -22,7 +22,7 @@ const query = `
     }
 `;
 
-const apiKey = "57991f98-4abc-4881-befe-1863508f503c";
+const apiKey = "257a0462-01d0-4ff3-91bb-cf739fbd24d6";
 
 let rewardMetrics = [];
 
