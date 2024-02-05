@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polkalator</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="polkalator.ico">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="app.js"></script>
 </head>
 
@@ -14,31 +16,41 @@
     <div class="calculatorContainer">
         <div class="optionContainer">
             <div class="stakingOptionClass">
-                <label for="stakingOption">SELECT STAKING OPTION</label>
-                <select id="stakingOption"></select>
+                <div class="label-container">
+                    <label for="stakingOption" class="label-left-align">SELECT STAKING OPTION</label>
+                </div>
+                <div class="input-container">
+                    <select id="stakingOption"></select>
+                </div>
             </div>
             <div class="stakingAmountClass">
-                <label for="stakingAmount">ENTER STAKING AMOUNT ($)</label>
-                <input type="number" id="stakingAmount" placeholder="Enter staking amount">
+                <div class="label-container">
+                    <label for="stakingAmount" class="label-left-align">ENTER STAKING AMOUNT ($)</label>
+                </div>
+                <div class="input-container">
+                    <input type="number" id="stakingAmount" placeholder="Enter staking amount">
+                </div>
             </div>
             <div class="containerTimePeriod">
-                <label for="timePeriod">SELECT TIME PERIOD</label>
-                <select id="timePeriod">
-                    <option value="year">Year</option>
-                    <option value="month">Month</option>
-                    <option value="week">Week</option>
-                    <option value="day">Day</option>
-                </select>
+                <div class="label-container">
+                    <label for="timePeriod" class="label-left-align">SELECT TIME PERIOD</label>
+                </div>
+                <div class="input-container">
+                    <select id="timePeriod">
+                        <option value="year">Year</option>
+                        <option value="month">Month</option>
+                        <option value="week">Week</option>
+                        <option value="day">Day</option>
+                    </select>
+                </div>
             </div>
-            <div id="result">Please enter a valid staking amount.</div>
 
+            <div id="result">0$</div>
+
+            <button class="button" id="resultButton" onclick="calculateAPR()">CALCULATE</button>
         </div>
-
-        <button class="button" id="resultButton" onclick="calculateAPR()">CALCULATE</button>
+        <canvas id="stakingChart" width="600" height="400"></canvas>
     </div>
-
-
-
 </body>
 
 </html>
